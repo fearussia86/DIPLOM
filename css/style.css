@@ -1,0 +1,551 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+
+
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.two-pictures {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+
+    
+}
+
+.zagolovok {
+    margin: 30px;
+    line-height: 1.2em;
+}
+
+
+.podlozhka {
+    background-color: #fff;
+    border: 2px solid #bebdbd;
+    box-shadow: 2px 4px 14px 7px #bebdbd !important;
+    -moz-box-shadow: 5px 3px 4px 2px #bebdbd;
+    -webkit-box-shadow: 5px 3px 4px 2px #bebdbd;
+    padding: 15px;
+}
+
+
+h1,h2,h3,h4 {
+    text-align: center;
+}
+
+.team-rating {
+    position: absolute;
+    bottom: 10px;
+    left: 250px;
+    display: inline-flex;
+}
+
+.team-area {
+    position: absolute;
+    font-size: 0.4em;
+    bottom: 15px;
+    left: 30px;
+    margin: 0 15px 20px;
+}
+
+.team-title h3 {
+   font-size: 1.2rem;
+   text-align: left;
+}
+
+.team-text p {
+    font-size: 0.7rem;
+    text-align: left;
+}
+
+.team-member {
+ position: relative;
+ overflow: visible;
+ display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-title {
+    
+}
+
+
+
+
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+
+.black {
+    color: #333333;
+    text-align: center;
+}
+
+.flex-container h3 {
+    color: #fff;
+}
+
+.white {
+   color: #fff; 
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 50px;
+    flex: 1;
+}
+
+
+.flex-container {
+    background: url(../images/advantages-bg.jpg);
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+
+.margin-20 {
+    margin: 20px;
+}
+
+
+.float {
+    float: left;
+    margin: 3px;
+}
+
+
+h2,h3,h4 {
+    text-align: center;
+}
+
+
+.text-typing
+{
+    width: 100%;
+    color: #00c557;
+    font-size: 25px;
+    font-family: 'Marck Script', cursive;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+}
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
+}
+
+.center-flex {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+    top: 200px;
+    left: 100px;
+}
+
+
+.relative {
+    position: relative;
+}
+
+
+.absolute {
+    position: absolute;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+
+/*СЛАЙДЕР*/
+
+
+
+#slider {
+    display: block;
+    
+   box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+   height: 450px;
+   width: 100%;
+   margin: -90px auto 0;
+   overflow: visible;
+   position: relative;
+   opacity: 0.1;
+   
+    
+}
+
+
+.mask-slider {
+    overflow: hidden;
+   height: 450px;
+   
+}
+
+img {
+    
+}
+
+#slider ul {
+   margin: 0;
+   padding: 0;
+   position: relative;
+
+}
+
+
+#slider li {
+   width: 98%;  /* Ширина изображения */
+   height: 450px; /* Высота изображения */
+   position: absolute;
+   top: -490px;	/* Исходное положение  (за пределами слайдера) */
+   list-style: none;
+}
+
+
+
+#first-slide {
+    
+}
+
+
+#slider li.firstanimation {
+   animation: cycle 25s linear infinite;
+}
+
+#slider li.secondanimation {
+   animation: cycletwo 25s linear infinite;
+}
+
+#slider li.thirdanimation {
+   animation: cyclethree 25s linear infinite;
+}
+
+#slider li.fourthanimation {
+   animation: cyclefour 25s linear infinite;
+}
+
+
+
+@keyframes cycle {
+   0%  { top: 0px; } /* При запуске слайдера, первое изображение уже видимо */
+   4%  { top: 0px; } /* Стартовая позиция */
+   16% { top: 0px; opacity:1; z-index:0; } /* С 4% до 16 % (3 секунды) изображение видимо */
+   20% { top: 450px; opacity: 0; z-index: 0; } /* с 16% до 20% (1 секунды)выход изображения*/
+   21% { top: -450px; opacity: 0; z-index: -1; } /* Возвращение на исходную позицию за пределами маски */
+   92% { top: -450px; opacity: 0; z-index: 0; }
+   96% { top: -450px; opacity: 0; } /* С 96% до 100% (1 секунда) – вход */
+   100%{ top: 0px; opacity: 1; }
+}
+
+@keyframes cycletwo {
+   0%  { top: -450px; opacity: 0; } /* Исходная позиция за пределами маски */
+   16% { top: -450px; opacity: 0; }/* Начало движения с 16% */
+   20% { top: 0px; opacity: 1; }
+   24% { top: 0px; opacity: 1; }  /* С 20% до 24% (в течении 1 секунды) — вход*/
+   36% { top: 0px; opacity: 1; z-index: 0; }   /* С 24% до 36 % (3 секунды) изображение видимо */
+   40% { top: 450px; opacity: 0; z-index: 0; } /* С 36% до 40% (1 секунда)— выход */
+   41% { top: -450px; opacity: 0; z-index: -1; }   /* Возврат на исходную позицию */
+   100%{ top: -450px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclethree {
+   0%  { top: -450px; opacity: 0; }
+   36% { top: -450px; opacity: 0; }
+   40% { top: 0px; opacity: 1; }
+   44% { top: 0px; opacity: 1; }
+   56% { top: 0px; opacity: 1; }
+   60% { top: 450px; opacity: 0; z-index: 0; }
+   61% { top: -450px; opacity: 0; z-index: -1; }
+   100%{ top: -450px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclefour {
+   0%  { top: -450px; opacity: 0; }
+   56% { top: -450px; opacity: 0; }
+   60% { top: 0px; opacity: 1; }
+   64% { top: 0px; opacity: 1; }
+   76% { top: 0px; opacity: 1; z-index: 0; }
+   80% { top: 450px; opacity: 0; z-index: 0; }
+   81% { top: -450px; opacity: 0; z-index: -1; }
+   100%{ top: -450px; opacity: 0; z-index: -1; }
+}
+@keyframes cyclefive {
+   0%  { top: -450px; opacity: 0; }
+   76% { top: -450px; opacity: 0; }
+   80% { top: 0px; opacity: 1; }
+   84% { top: 0px; opacity: 1; }
+   96% { top: 0px; opacity: 1; z-index: 0; }
+   100%{ top: 450px; opacity: 0; z-index: 0; }
+}
+
+
+
+
+.progress-bar {
+   position: relative;
+   top: -5px;
+   width: 680px;
+   height: 5px;
+   background: #00c557;
+   animation: fullexpand 25s ease-out infinite;
+}
+
+
+
+@keyframes fullexpand {
+   /* В этих ключевых кадрах анимация стационарна */
+   0%, 20%, 40%, 60%, 80%, 100% { width: 0%; opacity: 0; }
+
+   /* В этих — оживает */
+   4%, 24%, 44%, 64%, 84% { width: 0%; opacity: 0.3; }
+
+   /* В этих — плавно заполняется */
+   16%, 36%, 56%, 76%, 96% { width: 100%; opacity: 0.7; }
+
+   /* В этих ключевых кадрах индикатор выполнения завершил свой путь */
+   17%, 37%, 57%, 77%, 97% { width: 100%; opacity: 0.3; }
+
+   /* В этих ключевых кадрах индикатор выполнения исчезнет, а затем возобновит цикл */
+   18%, 38%, 58%, 78%, 98% { width: 100%; opacity: 0; }
+}
+
+
+
+/*Стили всплывающих подсказок*/
+#slider .tooltip {
+   background: rgba(0,0,0,0.7);
+   width: 300px;
+   height: 60px;
+   position: relative;
+   bottom: 75px;
+   left: -20px;
+}
+
+#slider .tooltip h1 {
+   color: #00c557;;
+   font-size: 24px;
+   font-weight: 300;
+   line-height: 60px;
+   padding: 0 0 0 10px;
+}
+
+
+#slider .tooltip {
+transition: all 0.3s ease-in-out;
+}
+
+#slider li#first: hover .tooltip,
+#slider li#second: hover .tooltip,
+#slider li#third: hover .tooltip,
+#slider li#fourth: hover .tooltip {
+   left: 0px;
+}
+
+/*КОНЕЦ СТИЛЕЙ СЛАЙДЕРА*/
+
+.z-index-999 {
+    z-index: 999;
+}
+
+
+.logo {
+    margin: 15px;
+}
+
+
+.uppermenu {
+    background: url("/images/uppermenu2.png");
+    min-height: 50px;
+    padding: 20px 1px 20px 1px;
+    
+    z-index: 999;
+    margin: 0 auto;
+}
+
+ul,ol.contacts {
+    list-style: none;
+    display: inline;
+}
+
+ul.contacts>li {
+    display: inline;
+    padding: 10px;
+}
+
+i.fa {
+    padding: 3px;
+}
+
+
+ul.contacts>li>i.fa {
+    color: #fff;
+    
+}
+
+a.social-header>i.fa {
+    color: #fff;
+}
+
+
+/*СТИЛИ МЕНЮ*/
+
+
+
+.menu {
+    margin: 50px;
+ font-family: Cuprum, Arial, Helvetica, sans-serif;
+ margin-top: 1px;
+ background-color: inherit;
+ position: relative;
+ z-index: 999999
+}
+
+
+.dws-menu ul,
+.dws-menu ol{
+ list-style: none;
+}
+
+.dws-menu > ul{
+ display: flex;
+ justify-content: space-around;
+ align-items:stretch;
+ /*border: 1px solid black;*/
+ padding-inline-start: 1px;
+ 
+}
+
+
+.dws-menu > ul li a{
+ display: block;
+ background: #ececed;
+ padding: 15px 30px 15px 40px;
+ font-size: 16px;
+ color: #454547;
+ text-decoration: none;
+ text-transform:uppercase;
+}
+
+.dws-menu > ul li{
+ position: relative;
+}
+
+.dws-menu > ul li > a i.fa{
+ position: absolute;
+ top: 5px;
+ left: 12px;
+ font-size: 21px;
+}
+
+.dws-menu > ul li:first-child{
+ border-left: 1px solid #b2b3b5;
+}
+.dws-menu > ul li:last-child{
+ border-right: 1px solid #babbbd;
+}
+
+.dws-menu > ul li{
+ position: relative;
+ border-right: 1px solid #c7c8ca;
+}
+
+.dws-menu li a:hover{
+ background:  #454547;
+ color: #ffffff;
+ box-shadow: 1px 5px 10px -5px black;
+ transition: all 0.5s ease;
+}
+
+.dws-menu > ul li a{
+ display: block;
+ background: #ececed;
+ padding: 15px 30px 15px 40px;
+ font-size: 14px;
+ color: #454547;
+ text-decoration: none;
+ text-transform:uppercase;
+ transition: all 0.3s ease;
+}
+
+.dws-menu li > ul li{
+ border: 2px solid #c7c8ca;
+ z-index: 9999;
+}
+
+.dws-menu li > ul li a{
+ padding: 10px;
+ text-transform: none;
+ background: #e4e4e5;
+}
+
+
+.dws-menu li > ul li ul{
+ position: absolute;
+ right: -200px;
+ top: 0;
+}
+
+/*sub menu*/
+.dws-menu li ul{
+ position: absolute;
+ min-width: 200px;
+ display: none;
+}
+
+.dws-menu li:hover > ul{
+ display: block;
+
+}
+
+
+.dws-menu > ul li a{
+ display: block;
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9c9c9+0,f6f6f6+2,c4c5c7+98,757577+100;Custom+3 */
+ background: #c9c9c9; /* Old browsers */
+ background: -moz-linear-gradient(top,  #c9c9c9 0%, #f6f6f6 2%, #c4c5c7 98%, #757577 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(top,  #c9c9c9 0%,#f6f6f6 2%,#c4c5c7 98%,#757577 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to bottom,  #c9c9c9 0%,#f6f6f6 2%,#c4c5c7 98%,#757577 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c9c9', endColorstr='#757577',GradientType=0 ); /* IE6-9 */
+
+ padding: 10px 40px 10px 40px;
+ font-size: 12px;
+ color: #454547;
+ text-decoration: none;
+ text-transform:uppercase;
+ transition: all 0.3s ease;
+}
+
+.dws-menu li a first-child {
+    background: #a0ab3f;
+}
+
+.dws-menu li a:hover{
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0e1e5+0,454547+2,454547+98,e0e1e5+100 */
+ background: #e0e1e5; /* Old browsers */
+ background: -moz-linear-gradient(top,  #e0e1e5 0%, #454547 2%, #454547 98%, #e0e1e5 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(top,  #e0e1e5 0%,#454547 2%,#454547 98%,#e0e1e5 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to bottom,  #e0e1e5 0%,#454547 2%,#454547 98%,#e0e1e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e1e5', endColorstr='#e0e1e5',GradientType=0 ); /* IE6-9 */
+
+ color: #ffffff;
+ box-shadow: 1px 5px 10px 1px black;
+ transition: all 0.1s ease;
+}
+
