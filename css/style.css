@@ -4,6 +4,40 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda');
 
 
+.price-title {
+    width: 80%;
+}
+
+.price-circle {
+width: 38px;    
+height: 38px;
+padding: 3px 1px 5px 4px;
+background: #a1a1a1;
+border-radius: 50%;
+box-shadow: 1px 2px 2px 2px #bebdbd;
+    -moz-box-shadow: 1px 2px 2px 2px #bebdbd;
+    -webkit-box-shadow: 1px 2px 2px 2px #bebdbd;
+
+}
+
+.price-box {
+    border: 2px solid #767676;
+    box-shadow: 2px 4px 14px 7px #bebdbd !important;
+    -moz-box-shadow: 5px 3px 4px 2px #bebdbd;
+    -webkit-box-shadow: 5px 3px 4px 2px #bebdbd;
+    padding: 15px;
+    margin: 15px;
+    display: flex;
+}
+
+
+.price-box-middle {
+    background-color: #a0dea0;
+}
+
+.price-box div:nth-child(2) {
+    background-color: #8fc94a;
+}
 
 .mb-30 {
     margin-bottom: 30px;
@@ -548,4 +582,6 @@ a.social-header>i.fa {
  box-shadow: 1px 5px 10px 1px black;
  transition: all 0.1s ease;
 }
+
+
 
