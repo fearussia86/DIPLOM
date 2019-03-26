@@ -14,13 +14,14 @@ header,#slider,main,aside,footer {
 body {
      display: grid;
      grid-template-areas: 
-     "header header header header"
-     "slider slider slider slider"
-     "aside main main main"
-     "footer footer footer footer";
-     grid-template-columns: 30% 25% 25% auto;
-     grid-template-rows: 150px 150px 250px 100px;
+     "header header header header header"
+     "slider slider slider slider slider"
+     "aside main main main main"
+     "footer footer footer footer footer";
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+     grid-template-rows: 150px 500px 10% 10% 10% 10% 10% 10% 10% 10%;
      gap: 10px;
+     grid-column-gap: 5px;
      
      
      
@@ -30,10 +31,12 @@ body {
 header {
      display: grid;
      grid-area: header;
+     
 }
 
 #slider {
      grid-area: slider;
+     margin: 5px;
 }
 
 main {
@@ -87,12 +90,18 @@ footer {
 
 .logo {
      display: grid;
-     grid-template-columns: 2fr;
+     grid-template-columns: 1fr;
+}
+
+
+.burger-menu {
+     display: grid;
+     grid-template-columns: 1fr;
 }
 
 header nav {
   display: grid;
-  grid-template-columns: 2fr 8fr 1fr;
+  grid-template-columns: 5% 10% 7% 65% auto;
   font-size: 1.2em;
   margin: 3px;
   height: 100%;
@@ -102,7 +111,7 @@ header nav {
 
 header ul {
      display: grid;
-     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
      align-items: center;
 }
 
@@ -111,5 +120,36 @@ header li {
   display: grid;
   align-items: center;
   justify-items: center;
+  border: 2px solid grey;
   
+}
+
+.phone-company {
+     max-width: 1920px;
+}
+
+
+
+#slider img {
+    width: 100%;
+  height: 500px;
+}
+
+#slider {
+     background-image: url(../images/uslugi-bg.jpg);
+     position: relative;
+}
+
+
+
+.text-slider-active {
+     position: absolute;
+    font-size: 1.2em;
+    color: black;
+    width: 700px;
+    border: 2px solid #00c557;
+    justify-content: center;
+    margin-left: 300px;
+    bottom: 250px;
+     
 }
